@@ -87,14 +87,19 @@ color:#fbd672;
     color:white;
 }
 
-#hero h1 {
+.hero-heading.active h1 ,#hero h1{
     font-size: 5em;
     font-weight: 400;
     font-family: 'Cinzel' , serif;
     position: absolute;
     bottom: 18%;
+    opacity: 0;
+    transition: .8s ease;
+}
+.hero-heading.active{
     left: 50%;
     transform: translateX(-50%);
+    opacity: 1!important;
 }
 
 #hero p {
@@ -173,11 +178,11 @@ section p{
 }
 
 
-#repertoire ul {
+#shows ul {
     list-style-type: none;
 }
 
-#repertoire ul li {
+#shows ul li {
     margin-bottom: 10px;
 }
 
@@ -215,7 +220,7 @@ footer form input[type="email"] {
     width: 300px;
     margin-right: 10px;
     border-radius: 20px;
-    border: none;
+    border: none; 
 }
 
 footer form button {
