@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Lauren Nychelle</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    
+        <nav>
+            <div class="logo">
+                <h1>Lauren <br> Nychelle</h1>
+            </div>
+            <ul>
+                <li class="nav-links"><a href="#home">Home</a></li>
+                <li class="nav-links"><a href="#biography">Biography</a></li>
+                <li class="nav-links"><a href="#repertoire">Work</a></li>
+                <li class="nav-links"><a href="#tours">Something else?</a></li>
+                <li class="nav-links"><a href="#upcoming">Contact</a></li>
+            </ul>
+            <div class="socials">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </nav>
+    
+        <div id="hero">
+            <img src="./assets/hero.png" alt="">
+            <h1>Lauren Nychelle </h1>
+            <!-- <p>Lighting Artist</p> -->
+        </div>
+    
+
+    <section id="biography">
+        <div class="left-holder">
+            <h2 class="headings">Biography</h2>
+            <h3>Hi! I'm Lauren Nychelle. Lorem ipsum dolor sit amet.</h3>
+        </div>
+        <div class="right-holder">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur libero numquam, eligendi fugiat alias enim voluptatum sapiente aperiam praesentium voluptatibus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eaque, omnis vitae officiis reiciendis explicabo sunt incidunt dolores fugiat dolor.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id facere distinctio tenetur quasi, necessitatibus, odit, labore accusamus velit eius exercitationem dignissimos eligendi quaerat quam facilis laboriosam minima rem. Quibusdam quaerat provident magni quod facere corrupti unde modi doloribus deserunt necessitatibus!</p>
+            <span> <a href=""> <button>Read More</button></a> </span>
+        </div>
+        
+    </section>
+
+    <section id="repertoire">
+        <h2 class="headings">Repertoire</h2>
+        <ul>
+            <li>Hamlet - Hamlet</li>
+            <li>Macbeth - Macbeth</li>
+            <li>King Lear - King Lear</li>
+        </ul>
+    </section>
+
+    <section id="tours">
+        <h2 class="headings">Current Tours</h2>
+        <p>Join me in the upcoming tours.</p>
+    </section>
+
+    <section id="upcoming">
+        <h2 class="headings">Upcoming Shows</h2>
+        <div class="show">
+            <p>Show: Hamlet</p>
+            <p>Date: March 3, 2025</p>
+            <button>Buy Tickets</button>
+        </div>
+        <div class="show">
+            <p>Show: Macbeth</p>
+            <p>Date: April 12, 2025</p>
+            <button>Buy Tickets</button>
+        </div>
+    </section>
+
+    <footer>
+        
+        <form id="subscribeForm">
+            <input type="email" placeholder="Enter your email" id="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p>© <span class="year"></span> Lauren Nychelle. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.year').textContent= new Date().getFullYear();
+    </script>
+<script src="https://kit.fontawesome.com/c9bd30d25e.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
