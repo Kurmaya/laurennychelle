@@ -209,7 +209,7 @@ section p{
     grid-template-columns: repeat(3,1fr);
 }
 .shows-tabs img{
-    width:300px;
+    width:350px;
     height: 200px;
     transition: .3s ease;
     cursor: pointer;
@@ -226,6 +226,10 @@ transform: scale(1.05);
 .shows-list-select{
     cursor: pointer;
     font-family: 'Montserrat',sans-serif;
+    transition: .3s ease;
+}
+.shows-list-select.active{
+    color:#fbd672;
 }
 .shows-gallery{
     display: flex;

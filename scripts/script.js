@@ -35,6 +35,10 @@ showsTabs.forEach(tab=>{
 
 showsList.forEach((el,i)=>{
     el.addEventListener('click',()=>{
+        showsList.forEach(l=>{
+            l.classList.remove('active');
+        })
+        el.classList.add('active');
         parnt= showsTabs[i].id;
         console.log(parnt);
         store2= i;
