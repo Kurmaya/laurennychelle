@@ -549,8 +549,9 @@ form input::placeholder, textarea::placeholder{
 font-size:1.5rem;
 }
 .director > *, .choreo > *, .film-director > *{
-    font-weight: 400;
+    font-weight: 500;
     font-style: italic;
+    color: rgba(150, 150, 150, 1);
 }
 /* .work.flex > .director > * , .work.flex > .choreo > *{
     font-weight: 300;
