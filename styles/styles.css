@@ -162,7 +162,7 @@ section p{
     width:80%;
 }
 .left-holder ,.right-holder{
-    width:50%;
+    width:100%;
     height:80%;
     margin: auto;
 }
@@ -211,11 +211,14 @@ section p{
 .shows-tabs img{
     width:350px;
     height: 200px;
-    transition: .3s ease;
+    transition: all .3s ease;
     cursor: pointer;
+    border-radius: 5px ;
+    border: .1px solid black;
 }
 .shows-tabs img:hover{
 transform: scale(1.05);
+border: 3px solid rgba(150,150,150,1);
 }
 .shows-tabs.hide{
     display: none;
@@ -227,8 +230,13 @@ transform: scale(1.05);
     cursor: pointer;
     font-family: 'Montserrat',sans-serif;
     transition: .3s ease;
+    font-weight: 500;
 }
 .shows-list-select.active{
+    color:#fbd672;
+    font-weight: 800;
+}
+.shows-list-select:hover{
     color:#fbd672;
 }
 .shows-gallery{
@@ -323,12 +331,13 @@ button:hover {
     font-size: 2rem;
 }
 /* Awards section */
-#awards h2{
-    text-align: center;
-}
+
 .awards-wrapper h3{
     color:#fbd672;
+    text-align: center;
+    text-shadow: 0px 0px .5rem yellow;
 }
+
 .awards-wrapper h4, .awards-wrapper h5{
     font-family: 'Montserrat',sans-serif;
 }
@@ -353,20 +362,21 @@ button:hover {
 .award{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap:15px;
     height: 200px;
     width: 100%;
     border-top: 1px solid rgba(150,150,150,1);
     /* border-bottom: 1px solid rgba(150,150,150,1); */
     padding:.5rem 0;
+    text-align: center;
 }
 /* .award > *{
     margin: 10px 0;
 } */
 .award > :first-child{
-    align-self: flex-start!important;
+    /* align-self: flex-start!important; */
 }
 /* Footer */
 footer {
@@ -560,3 +570,59 @@ font-size:1.5rem;
     
 }
 
+/* Bio page */
+#bio {
+    width: 100%;
+    height: 100%;
+}
+#biography h1{
+    display: block;
+    width: 100%;
+}
+.glow{
+    transition: .3s ease;
+}
+.glow:hover{
+    animation: glow infinite alternate ease 1s;
+    cursor: crosshair;
+}
+.bio-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin:100px auto;
+}
+#bio .left-holder,#bio .right-holder{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin:20px auto;
+}
+.bio-wrapper h3{
+    color:#fbd672;
+}
+.bio-wrapper p{
+width: 80%;
+text-align: center;
+line-height: 1.5;
+margin: 10px auto;
+}
+#education{
+    height: 100%;
+}
+#education p{
+    font-family: 'Montserrat',sans-serif;
+    line-height: 1.5;
+    margin:20px auto;
+}
+@keyframes glow {
+    0%{
+        text-shadow: 0px 5px 1rem transparent;
+    }
+    100%{
+        text-shadow: 0px 5px 1rem yellow;
+    }
+}
