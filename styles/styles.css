@@ -543,6 +543,7 @@ form input::placeholder, textarea::placeholder{
 }
 .work h3{
     color:#fbd672;
+    font-family: 'Cinzel', serif!important;
 }
 .title{
 font-size:1.5rem;
