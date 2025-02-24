@@ -120,6 +120,9 @@ color:#fbd672;
     color:rgba(250,250,250,1);
     z-index: 11;
   }
+  .swiper-pagination-bullet{
+    background: white!important;
+  }
 #hero {
     /* padding: 20px 0; */
     position: relative;
