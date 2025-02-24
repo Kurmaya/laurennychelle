@@ -6,7 +6,7 @@ const left = document.querySelector('.left'), right = document.querySelector('.r
 const lightBox = document.querySelector('.lightbox');
 let store ,parnt,store2;
 store2=showsTabs[0].id;
-const clases = ['.show-1-img','.show-2-img','.show-3-img','.show-4-img','.show-5-img'];
+const clases = ['.show-1-img','.show-2-img','.show-3-img','.show-4-img','.show-5-img','.show-6-img'];
 
 document.getElementById('show-1').querySelectorAll('img').forEach(img=>{
     img.classList.add('show-1-img');
@@ -22,6 +22,9 @@ document.getElementById('show-4').querySelectorAll('img').forEach(img=>{
 })
 document.getElementById('show-5').querySelectorAll('img').forEach(img=>{
     img.classList.add('show-5-img');
+})
+document.getElementById('show-6').querySelectorAll('img').forEach(img=>{
+    img.classList.add('show-6-img');
 })
 
 showsTabs.forEach(tab=>{
@@ -64,14 +67,16 @@ const show1Imgs = showsTabs[0].querySelectorAll(clases[0]),
 show2Imgs = showsTabs[1].querySelectorAll(clases[1]),
 show3Imgs = showsTabs[2].querySelectorAll(clases[2]),
 show4Imgs = showsTabs[3].querySelectorAll(clases[3]),
-show5Imgs = showsTabs[4].querySelectorAll(clases[4]);
+show5Imgs = showsTabs[4].querySelectorAll(clases[4]),
+show6Imgs = showsTabs[5].querySelectorAll(clases[5]);
 
-const arr = [show1Imgs,show2Imgs,show3Imgs,show4Imgs,show5Imgs];
+const arr = [show1Imgs,show2Imgs,show3Imgs,show4Imgs,show5Imgs,show6Imgs];
 
 
 arr.forEach((el,i)=>{
     el.forEach((e,n)=>{
         e.addEventListener('click',()=>{
+            document.body.style.overflow='hidden';
             store2=e.parentNode;
             store=n;
             console.log(store2.id,store);
@@ -119,6 +124,7 @@ switch (store2.id) {
             else if(store< arr[2].length){
                 store++;
                 // console.log(store);
+                
                 lightBox.querySelector('img').src=arr[2][store].src;
                 right.style.opacity='1';
                 left.style.opacity='1';
@@ -144,6 +150,18 @@ switch (store2.id) {
                     store++;
                     // console.log(store);
                     lightBox.querySelector('img').src=arr[4][store].src;
+                    right.style.opacity='1';
+                    left.style.opacity='1';
+                }
+            break;
+            case 'show-6':
+                if(store == arr[5].length-1){
+                    right.style.opacity='0';
+                }
+                else if(store< arr[5].length){
+                    store++;
+                    // console.log(store);
+                    lightBox.querySelector('img').src=arr[5][store].src;
                     right.style.opacity='1';
                     left.style.opacity='1';
                 }
@@ -217,6 +235,18 @@ left.addEventListener('click',()=>{
                     left.style.opacity='1';
                 }
                 break;
+                case 'show-6':
+                    if(store == 0){
+                        left.style.opacity='0';
+                    }
+                else if(store> 0){
+                    store--;
+                    // console.log(store);
+                    lightBox.querySelector('img').src=arr[5][store].src;
+                    right.style.opacity='1';
+                    left.style.opacity='1';
+                }
+                break;
                 
             
     
@@ -225,10 +255,12 @@ left.addEventListener('click',()=>{
     }    
     });
 
-window.addEventListener('load',()=>{
-    hero.classList.add('active');
-});
+// window.addEventListener('load',()=>{
+//     hero.classList.add('active');
+//     document.querySelector('#hero h3').classList.add('active');
+// });
 
+//nav scrolling || document.querySelector("nav").scrollTop > '100vh'
 
 
 //footer year 

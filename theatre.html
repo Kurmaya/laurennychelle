@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Work - Lauren Nychelle</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <a href="./index.html"><h1>Lauren Nychelle</h1><br><p>Lighting & Projection Designer</p></a> 
+        </div>
+        <ul>
+            <li class="nav-links"><a href="./home.html">Home</a></li>
+            <li class="nav-links"><a href="./work.html">Work</a></li>
+            <!-- <li class="nav-links"><a href="./theatre.html">Theatre</a></li>
+            <li class="nav-links"><a href="./dance.html">Dance</a></li> -->
+            <li class="nav-links"><a href="./bio.html">About</a></li>
+            <!-- <li class="nav-links"><a href="./contact.html">Contact</a></li> -->
+        </ul>
+        <div class="socials">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </nav>
+    
+       <section id="theatre">
+        <h1>Theatre</h1>
+      <div class="theatre-portfolio">
+        <div class="theatre-show-holder">
+            <div class="theatre-left">
+                <h3 class="theatre-portfolio-title">What’s Going On(2024)</h3>
+                <h4><span>Director: </span> Deb Lapidus</h4>
+                
+            </div>
+            <div class="theatre-right">
+
+            </div>
+        </div>
+      </div>
+        
+       
+        
+        
+       </section>
+
+    <footer>
+        <div class="logo">
+            <a href="./index.html"><h1>Lauren Nychelle</h1><br><p>Lighting & Projection Designer</p></a> 
+        </div>
+        <form id="subscribeForm">
+            <input type="email" placeholder="Enter your email" id="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p>© <span class="year"></span> Lauren Nychelle. All rights reserved.</p>
+    </footer>
+   
+<script src="https://kit.fontawesome.com/c9bd30d25e.js" crossorigin="anonymous"></script>
+    <script src="./scripts/nav.js"></script>
+    <script>
+       const dropDown = document.querySelectorAll('.dropdown-content p');
+       const dropTabs = document.querySelectorAll('.drop');
+
+       dropDown.forEach((d,i)=>{
+        d.addEventListener('click',()=>{
+            document.querySelector('.work-heading').textContent= d.textContent;
+            document.querySelector('.dropdown span').textContent = d.textContent;
+            dropTabs.forEach(drop=>{
+                drop.classList.remove('active');
+            })
+            dropTabs[i].classList.add('active');
+        })
+       })
+
+        document.querySelector('.year').textContent= new Date().getFullYear();
+    </script>
+</body>
+</html>
