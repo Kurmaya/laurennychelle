@@ -598,6 +598,10 @@ form input::placeholder, textarea::placeholder{
     display: grid;
     place-items: center;
   }
+  .dropdown i{
+    display: grid;
+    place-items: center;
+  }
   .work-holder-new{
     margin-top: 100px;
     width:100%;
@@ -671,7 +675,7 @@ form input::placeholder, textarea::placeholder{
     margin:50px auto;
 }
 #work h2{
-    text-align: center;
+    /* text-align: center; */
 }
 #work{
     height: 100%;
@@ -802,12 +806,44 @@ margin: 10px auto;
 }
 
 /*theatre page */
+#theatre{
+    width: 100%;
+    height: 100%;
+    
+}
 
 .theatre-portfolio{
     width: 100%;
     height: 100%;
     display: flex;
-    
+    flex-direction: column;
+    gap:30px;
+}
+.theatre-show{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+.theatre-left{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    align-self: flex-start;
+}
+.theatre-right{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items:center ;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+.theatre-right img{
+    width:200px;
+    height:120px;
 }
 @keyframes glow {
     0%{
