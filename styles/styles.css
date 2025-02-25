@@ -370,12 +370,18 @@ button:hover {
     transform: rotate(-45deg) translateY(-50%);
     -webkit-transform: rotate(-45deg);
     right:5%;
+    pointer-events: all;
   }
   
   .left {
     transform: rotate(135deg) translateY(-50%);
     -webkit-transform: rotate(135deg);
     left:5%;
+    pointer-events: all;
+  }
+  .left.hide,.right.hide{
+    opacity: 0;
+    pointer-events: none;
   }
 .lightbox-wrapper{
     width: 100%;

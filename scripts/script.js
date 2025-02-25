@@ -57,8 +57,8 @@ close.addEventListener('click',()=>{
   lightBox.classList.remove('active')  ;
   document.body.style.overflowY='scroll';
   document.body.style.overflowX='hidden';
-  left.style.opacity='1';
-  right.style.opacity='1';
+  left.classList.remove('hide');
+  right.classList.remove('hide');
 })
 
 
@@ -76,13 +76,23 @@ const arr = [show1Imgs,show2Imgs,show3Imgs,show4Imgs,show5Imgs,show6Imgs];
 arr.forEach((el,i)=>{
     el.forEach((e,n)=>{
         e.addEventListener('click',()=>{
+            
             document.body.style.overflow='hidden';
             store2=e.parentNode;
             store=n;
+            if(n == 0){
+                left.classList.add('hide');
+                console.log('0');
+            }
+            else if(n == arr[i].length-1 ){
+                right.classList.add('hide');
+                console.log('end');
+            }
             console.log(store2.id,store);
             lightBox.classList.add('active');
             lightBox.querySelector('img').src=e.src;
             lightBox.querySelector('h2').textContent= showsList[i].textContent;
+            
         })
         
     })
@@ -94,36 +104,36 @@ switch (store2.id) {
     case 'show-1':
         if(store == arr[0].length-2){
             store++;
-            right.style.opacity='0';
+            right.classList.add('hide');
             lightBox.querySelector('img').src=arr[0][store].src;
         }
         else if(store< arr[0].length){
             store++;
             // console.log(store);
             lightBox.querySelector('img').src=arr[0][store].src;
-            right.style.opacity='1';
-            left.style.opacity='1';
+            right.classList.remove('hide');
+            left.classList.remove('hide');
         }
         
         break;
         case 'show-2':
             if(store == arr[1].length-2){
                 store++;
-                right.style.opacity='0';
+                right.classList.add('hide');
                 lightBox.querySelector('img').src=arr[1][store].src;
             }
             else if(store< arr[1].length){
                 store++;
                 // console.log(store);
                 lightBox.querySelector('img').src=arr[1][store].src;
-                right.style.opacity='1';
-                left.style.opacity='1';
+                right.classList.remove('hide');
+                left.classList.remove('hide');
             }
         break;
         case 'show-3':
             if(store == arr[2].length-2){
                 store++;
-            right.style.opacity='0';
+            right.classList.add('hide');
             lightBox.querySelector('img').src=arr[2][store].src;
             }
             else if(store< arr[2].length){
@@ -131,50 +141,50 @@ switch (store2.id) {
                 // console.log(store);
                 
                 lightBox.querySelector('img').src=arr[2][store].src;
-                right.style.opacity='1';
-                left.style.opacity='1';
+                right.classList.remove('hide');
+                left.classList.remove('hide');
             }
             break;
             case 'show-4':
                 if(store == arr[3].length-2){
                     store++;
-                    right.style.opacity='0';
+                    right.classList.add('hide');
                     lightBox.querySelector('img').src=arr[3][store].src;
                 }
                 else if(store< arr[3].length){
                     store++;
                     // console.log(store);
                     lightBox.querySelector('img').src=arr[3][store].src;
-                    right.style.opacity='1';
-                    left.style.opacity='1';
+                    right.classList.remove('hide');
+                    left.classList.remove('hide');
                 }
             break;
             case 'show-5':
                 if(store == arr[4].length-2){
                     store++;
-                    right.style.opacity='0';
+                    right.classList.add('hide');
                     lightBox.querySelector('img').src=arr[4][store].src;
                 }
                 else if(store< arr[4].length){
                     store++;
                     // console.log(store);
                     lightBox.querySelector('img').src=arr[4][store].src;
-                    right.style.opacity='1';
-                    left.style.opacity='1';
+                    right.classList.remove('hide');
+                    left.classList.remove('hide');
                 }
             break;
             case 'show-6':
                 if(store == arr[5].length-2){
                     store++;
-            right.style.opacity='0';
+            right.classList.add('hide');
             lightBox.querySelector('img').src=arr[5][store].src;
                 }
                 else if(store< arr[5].length){
                     store++;
                     // console.log(store);
                     lightBox.querySelector('img').src=arr[5][store].src;
-                    right.style.opacity='1';
-                    left.style.opacity='1';
+                    right.classList.remove('hide');
+                    left.classList.remove('hide');
                 }
             break;
             
@@ -189,85 +199,85 @@ left.addEventListener('click',()=>{
         case 'show-1':
             if(store == 1){
                 store--;
-                left.style.opacity='0';
+                left.classList.add('hide');
                 lightBox.querySelector('img').src=arr[0][store].src;
             }
         else if(store> 0){
             store--;
             // console.log(store);
             lightBox.querySelector('img').src=arr[0][store].src;
-            right.style.opacity='1';
-            left.style.opacity='1';
+            right.classList.remove('hide');
+            left.classList.remove('hide');
         }
             break;
             case 'show-2':
                 if(store == 1){
                     store--;
-                left.style.opacity='0';
+                left.classList.add('hide');
                 lightBox.querySelector('img').src=arr[1][store].src;
                 }
             else if(store> 0){
                 store--;
                 // console.log(store);
                 lightBox.querySelector('img').src=arr[1][store].src;
-                right.style.opacity='1';
-                left.style.opacity='1';
+                right.classList.remove('hide');
+                left.classList.remove('hide');
             }
             break;
             case 'show-3':
                 if(store == 1){
                     store--;
-                left.style.opacity='0';
+                left.classList.add('hide');
                 lightBox.querySelector('img').src=arr[2][store].src;
                 }
             else if(store> 0){
                 store--;
                 // console.log(store);
                 lightBox.querySelector('img').src=arr[2][store].src;
-                right.style.opacity='1';
-                left.style.opacity='1';
+                right.classList.remove('hide');
+                left.classList.remove('hide');
             }
                 break;
                 case 'show-4':
                     if(store == 1){
                         store--;
-                left.style.opacity='0';
+                left.classList.add('hide');
                 lightBox.querySelector('img').src=arr[3][store].src;
                     }
                 else if(store> 0){
                     store--;
                     // console.log(store);
                     lightBox.querySelector('img').src=arr[3][store].src;
-                    right.style.opacity='1';
-                    left.style.opacity='1';
+                    right.classList.remove('hide');
+                    left.classList.remove('hide');
                 }
                 break;
                 case 'show-5':
                     if(store ==1){
                         store--;
-                left.style.opacity='0';
+                left.classList.add('hide');
                 lightBox.querySelector('img').src=arr[4][store].src;
                     }
                 else if(store> 0){
                     store--;
                     // console.log(store);
                     lightBox.querySelector('img').src=arr[4][store].src;
-                    right.style.opacity='1';
-                    left.style.opacity='1';
+                    right.classList.remove('hide');
+                    left.classList.remove('hide');
                 }
                 break;
                 case 'show-6':
                     if(store == 1){
                         store --;
-                        left.style.opacity='0';
+                        left.classList.add('hide');
                         lightBox.querySelector('img').src=arr[5][store].src;
                     }
                 else if(store> 0){
                     store--;
                     // console.log(store);
                     lightBox.querySelector('img').src=arr[5][store].src;
-                    right.style.opacity='1';
-                    left.style.opacity='1';
+                    right.classList.remove('hide');
+                    left.classList.remove('hide');
                 }
                 break;
                 

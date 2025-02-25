@@ -197,6 +197,12 @@
        shows.forEach((show,i)=>{
         show.querySelectorAll('img').forEach((img,j)=>{
 img.addEventListener('click',()=>{
+    if(j == 0){
+        left.classList.add('hide');
+    }
+    else if(j == show.querySelectorAll('img').length-1){
+        right.classList.add('hide');
+    }
     store=j;
     parnt =  img.parentNode;
     document.body.style.overflow='hidden';
@@ -210,15 +216,15 @@ img.addEventListener('click',()=>{
        right.addEventListener('click',()=>{
         let count = parnt.querySelectorAll('img');
         if(store  == count.length-2){
-            right.style.opacity='0';
+            right.classList.add('hide');
             store ++;
             lightbox.querySelector('img').src= count[store].src;
         }
         else if(store-1 < count.length-1){
             store ++ ;
             lightbox.querySelector('img').src= count[store].src;
-            right.style.opacity='1';
-            left.style.opacity='1';
+            right.classList.remove('hide');
+            left.classList.remove('hide');
         }
        });
 
@@ -226,15 +232,15 @@ img.addEventListener('click',()=>{
         let count = parnt.querySelectorAll('img');
         
         if(store  == 1){
-            left.style.opacity='0';
+            left.classList.add('hide');
             store -- ;
             lightbox.querySelector('img').src= count[store].src;
         }
         else if(store <= count.length){
             store -- ;
             lightbox.querySelector('img').src= count[store].src;
-            left.style.opacity='1';
-            right.style.opacity='1';
+            left.classList.remove('hide');
+            right.classList.remove('hide');
         }
        });
 
@@ -243,8 +249,8 @@ close.addEventListener('click',()=>{
     document.body.style.overflowX='hidden';
     document.body.style.overflowY='scroll';
     store=0;
-    left.style.opacity='1';
-    right.style.opacity='1';
+    left.classList.remove('hide');
+    right.classList.remove('hide');
     
 })
         document.querySelector('.year').textContent= new Date().getFullYear();
