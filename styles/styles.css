@@ -353,7 +353,7 @@ button:hover {
     position: fixed;
     left:0;
     top:0;
-    z-index: 10;
+    z-index: 12;
     background:rgba(0,0,0,.9);
 }
 .arrow {
@@ -605,7 +605,8 @@ form input::placeholder, textarea::placeholder{
     color:white;
     cursor: pointer;
     background:rgba(0,0,0,.9);
-    width:100px;
+    width:150px;
+    border-radius: 30px;
     padding:.5rem 0;
   }
   .dropdown span{
@@ -795,6 +796,7 @@ font-size:1.5rem;
 #bio {
     width: 100%;
     height: 100%;
+    margin:50px auto;
 }
 #biography h1{
     display: block;
@@ -899,9 +901,10 @@ margin: 10px auto;
     width: 200px;
     height: 120px;
     transition: .3s ease;
-    border: 1px solid rgba(150, 150, 150, 1);
+    border: 1px solid rgba(10, 10, 10, 1);
     cursor: pointer;
     object-fit: cover;
+    box-shadow: 1px 1px .5rem black;
 }
 .theatre-right img:hover{
     scale: 1.05;
