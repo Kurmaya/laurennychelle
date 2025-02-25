@@ -1,3 +1,9 @@
+const cta = document.querySelector('.cta > button');
+
+cta.addEventListener('click',()=>{
+  document.querySelector('.cta').classList.toggle('active');
+})
+
 window.onscroll = function() {scrollFunction()};
 const currentLocation=location.href;
 const navItem= document.querySelectorAll(".nav-links");

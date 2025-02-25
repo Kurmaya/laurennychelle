@@ -92,9 +92,10 @@ arr.forEach((el,i)=>{
 right.addEventListener('click',()=>{
 switch (store2.id) {
     case 'show-1':
-        if(store == arr[0].length-1){
+        if(store == arr[0].length-2){
+            store++;
             right.style.opacity='0';
-            
+            lightBox.querySelector('img').src=arr[0][store].src;
         }
         else if(store< arr[0].length){
             store++;
@@ -106,8 +107,10 @@ switch (store2.id) {
         
         break;
         case 'show-2':
-            if(store == arr[1].length-1){
+            if(store == arr[1].length-2){
+                store++;
                 right.style.opacity='0';
+                lightBox.querySelector('img').src=arr[1][store].src;
             }
             else if(store< arr[1].length){
                 store++;
@@ -118,8 +121,10 @@ switch (store2.id) {
             }
         break;
         case 'show-3':
-            if(store == arr[2].length-1){
-                right.style.opacity='0';
+            if(store == arr[2].length-2){
+                store++;
+            right.style.opacity='0';
+            lightBox.querySelector('img').src=arr[2][store].src;
             }
             else if(store< arr[2].length){
                 store++;
@@ -131,8 +136,10 @@ switch (store2.id) {
             }
             break;
             case 'show-4':
-                if(store == arr[3].length-1){
+                if(store == arr[3].length-2){
+                    store++;
                     right.style.opacity='0';
+                    lightBox.querySelector('img').src=arr[3][store].src;
                 }
                 else if(store< arr[3].length){
                     store++;
@@ -143,8 +150,10 @@ switch (store2.id) {
                 }
             break;
             case 'show-5':
-                if(store == arr[4].length-1){
+                if(store == arr[4].length-2){
+                    store++;
                     right.style.opacity='0';
+                    lightBox.querySelector('img').src=arr[4][store].src;
                 }
                 else if(store< arr[4].length){
                     store++;
@@ -155,8 +164,10 @@ switch (store2.id) {
                 }
             break;
             case 'show-6':
-                if(store == arr[5].length-1){
-                    right.style.opacity='0';
+                if(store == arr[5].length-2){
+                    store++;
+            right.style.opacity='0';
+            lightBox.querySelector('img').src=arr[5][store].src;
                 }
                 else if(store< arr[5].length){
                     store++;
@@ -176,8 +187,10 @@ switch (store2.id) {
 left.addEventListener('click',()=>{
     switch (store2.id) {
         case 'show-1':
-            if(store == 0){
+            if(store == 1){
+                store--;
                 left.style.opacity='0';
+                lightBox.querySelector('img').src=arr[0][store].src;
             }
         else if(store> 0){
             store--;
@@ -188,8 +201,10 @@ left.addEventListener('click',()=>{
         }
             break;
             case 'show-2':
-                if(store == 0){
-                    left.style.opacity='0';
+                if(store == 1){
+                    store--;
+                left.style.opacity='0';
+                lightBox.querySelector('img').src=arr[1][store].src;
                 }
             else if(store> 0){
                 store--;
@@ -200,8 +215,10 @@ left.addEventListener('click',()=>{
             }
             break;
             case 'show-3':
-                if(store == 0){
-                    left.style.opacity='0';
+                if(store == 1){
+                    store--;
+                left.style.opacity='0';
+                lightBox.querySelector('img').src=arr[2][store].src;
                 }
             else if(store> 0){
                 store--;
@@ -212,8 +229,10 @@ left.addEventListener('click',()=>{
             }
                 break;
                 case 'show-4':
-                    if(store == 0){
-                        left.style.opacity='0';
+                    if(store == 1){
+                        store--;
+                left.style.opacity='0';
+                lightBox.querySelector('img').src=arr[3][store].src;
                     }
                 else if(store> 0){
                     store--;
@@ -224,8 +243,10 @@ left.addEventListener('click',()=>{
                 }
                 break;
                 case 'show-5':
-                    if(store == 0){
-                        left.style.opacity='0';
+                    if(store ==1){
+                        store--;
+                left.style.opacity='0';
+                lightBox.querySelector('img').src=arr[4][store].src;
                     }
                 else if(store> 0){
                     store--;
@@ -236,8 +257,10 @@ left.addEventListener('click',()=>{
                 }
                 break;
                 case 'show-6':
-                    if(store == 0){
+                    if(store == 1){
+                        store --;
                         left.style.opacity='0';
+                        lightBox.querySelector('img').src=arr[5][store].src;
                     }
                 else if(store> 0){
                     store--;
